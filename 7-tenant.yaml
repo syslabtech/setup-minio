@@ -7,7 +7,7 @@ metadata:
     prometheus.io/scrape: "true"
     sidecar.istio.io/inject: "false"
   name: as-minio
-  namespace: ns-data-hc
+  namespace: ns-minio
 scheduler:
   name: ""
 spec:
