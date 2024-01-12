@@ -28,7 +28,6 @@ spec:
     servers: 4
     volumeClaimTemplate:
       metadata:
-        creationTimestamp: null
         name: data
       spec:
         accessModes:
