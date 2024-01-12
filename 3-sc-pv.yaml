@@ -1,0 +1,80 @@
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  name: sc-minio
+provisioner: kubernetes.io/no-provisioner
+reclaimPolicy: Delete
+volumeBindingMode: WaitForFirstConsumer
+
+--- 
+
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: pv-minio-01
+spec:
+  accessModes:
+    - ReadWriteOnce
+  capacity:
+    storage: 1Gi
+  hostPath:
+    path: /root/minio1
+    type: ''
+  persistentVolumeReclaimPolicy: Retain
+  storageClassName: sc-minio
+  volumeMode: Filesystem
+
+--- 
+
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: pv-minio-02
+spec:
+  accessModes:
+    - ReadWriteOnce
+  capacity:
+    storage: 1Gi
+  hostPath:
+    path: /root/minio2
+    type: ''
+  persistentVolumeReclaimPolicy: Retain
+  storageClassName: sc-minio
+  volumeMode: Filesystem
+
+--- 
+
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: pv-minio-03
+spec:
+  accessModes:
+    - ReadWriteOnce
+  capacity:
+    storage: 1Gi
+  hostPath:
+    path: /root/minio3
+    type: ''
+  persistentVolumeReclaimPolicy: Retain
+  storageClassName: sc-minio
+  volumeMode: Filesystem
+
+--- 
+
+
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: pv-minio-04
+spec:
+  accessModes:
+    - ReadWriteOnce
+  capacity:
+    storage: 1Gi
+  hostPath:
+    path: /root/minio4
+    type: ''
+  persistentVolumeReclaimPolicy: Retain
+  storageClassName: sc-minio
+  volumeMode: Filesystem

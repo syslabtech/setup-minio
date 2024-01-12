@@ -1,0 +1,44 @@
+apiVersion: minio.min.io/v2
+kind: Tenant
+metadata:
+  annotations:
+    prometheus.io/path: /minio/v2/metrics/cluster
+    prometheus.io/port: 443, 9000
+    prometheus.io/scrape: "true"
+    sidecar.istio.io/inject: "false"
+  name: as-minio
+  namespace: ns-data-hc
+scheduler:
+  name: ""
+spec:
+  configuration:
+    name: as-minio-env-configuration
+  credsSecret:
+    name: as-minio-secret
+  exposeServices: {}
+  image: quay.io/minio/minio:RELEASE.2022-06-11T19-55-32Z
+  imagePullSecret: {}
+  mountPath: /export
+  pools:
+  - name: pool-0
+    resources:
+      requests:
+        cpu: "1"
+        memory: 2Gi
+    servers: 4
+    volumeClaimTemplate:
+      metadata:
+        creationTimestamp: null
+        name: data
+      spec:
+        accessModes:
+        - ReadWriteOnce
+        resources:
+          requests:
+            storage: "1073741824"
+        storageClassName: sc-minio
+      status: {}
+    volumesPerServer: 1
+  requestAutoCert: true
+  users:
+  - name: as-minio-user-0
