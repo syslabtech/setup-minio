@@ -16,7 +16,7 @@ spec:
   accessModes:
     - ReadWriteOnce
   capacity:
-    storage: 1Gi
+    storage: 100Mi
   hostPath:
     path: /root/minio1
     type: ''
@@ -34,7 +34,7 @@ spec:
   accessModes:
     - ReadWriteOnce
   capacity:
-    storage: 1Gi
+    storage: 100Mi
   hostPath:
     path: /root/minio2
     type: ''
@@ -52,7 +52,7 @@ spec:
   accessModes:
     - ReadWriteOnce
   capacity:
-    storage: 1Gi
+    storage: 100Mi
   hostPath:
     path: /root/minio3
     type: ''
@@ -71,7 +71,7 @@ spec:
   accessModes:
     - ReadWriteOnce
   capacity:
-    storage: 1Gi
+    storage: 100Mi
   hostPath:
     path: /root/minio4
     type: ''
