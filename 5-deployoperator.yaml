@@ -24,7 +24,7 @@ metadata:
   name: minio-operator
   namespace: ns-minio
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       name: minio-operator
