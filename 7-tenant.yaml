@@ -23,8 +23,8 @@ spec:
   - name: pool-0
     resources:
       requests:
-        cpu: "1"
-        memory: 2Gi
+        cpu: "10m"
+        memory: 20Mi
     servers: 4
     volumeClaimTemplate:
       metadata:
