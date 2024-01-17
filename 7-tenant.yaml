@@ -23,8 +23,8 @@ spec:
   - name: pool-0
     resources:
       requests:
-        cpu: "10m"
-        memory: 20Mi
+        cpu: "100m"
+        memory: 200Mi
     servers: 4
     tolerations:
       - effect: NoSchedule
