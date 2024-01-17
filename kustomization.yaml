@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+namespace: ns-minio
+
+resources:
+  - 1-namespace.yaml
+  - 2-crd.yaml
+  - 3-sc-pv.yaml
+  - 4-operator.yaml
+  - 5-deployoperator.yaml
+  - 6-tenantsecrets.yaml
+  - 7-tenant.yaml
