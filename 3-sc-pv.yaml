@@ -18,7 +18,7 @@ spec:
   capacity:
     storage: 100Mi
   hostPath:
-    path: /root/minio1
+    path: /var/data/minio1
     type: ''
   persistentVolumeReclaimPolicy: Retain
   storageClassName: sc-minio
@@ -36,7 +36,7 @@ spec:
   capacity:
     storage: 100Mi
   hostPath:
-    path: /root/minio2
+    path: /var/data/minio2
     type: ''
   persistentVolumeReclaimPolicy: Retain
   storageClassName: sc-minio
@@ -54,7 +54,7 @@ spec:
   capacity:
     storage: 100Mi
   hostPath:
-    path: /root/minio3
+    path: /var/data/minio3
     type: ''
   persistentVolumeReclaimPolicy: Retain
   storageClassName: sc-minio
@@ -73,7 +73,7 @@ spec:
   capacity:
     storage: 100Mi
   hostPath:
-    path: /root/minio4
+    path: /var/data/minio4
     type: ''
   persistentVolumeReclaimPolicy: Retain
   storageClassName: sc-minio
