@@ -16,9 +16,9 @@ spec:
   accessModes:
     - ReadWriteOnce
   capacity:
-    storage: 100Mi
+    storage: 2Gi
   hostPath:
-    path: /var/data/minio1
+    path: /home/docker/minio1
     type: ''
   persistentVolumeReclaimPolicy: Retain
   storageClassName: sc-minio
@@ -34,9 +34,9 @@ spec:
   accessModes:
     - ReadWriteOnce
   capacity:
-    storage: 100Mi
+    storage: 2Gi
   hostPath:
-    path: /var/data/minio2
+    path: /home/docker/minio2
     type: ''
   persistentVolumeReclaimPolicy: Retain
   storageClassName: sc-minio
@@ -52,9 +52,9 @@ spec:
   accessModes:
     - ReadWriteOnce
   capacity:
-    storage: 100Mi
+    storage: 2Gi
   hostPath:
-    path: /var/data/minio3
+    path: /home/docker/minio3
     type: ''
   persistentVolumeReclaimPolicy: Retain
   storageClassName: sc-minio
@@ -71,9 +71,9 @@ spec:
   accessModes:
     - ReadWriteOnce
   capacity:
-    storage: 100Mi
+    storage: 2Gi
   hostPath:
-    path: /var/data/minio4
+    path: /home/docker/minio4
     type: ''
   persistentVolumeReclaimPolicy: Retain
   storageClassName: sc-minio
