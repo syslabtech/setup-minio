@@ -1,0 +1,40 @@
+metadata:
+  creationTimestamp: "2024-01-23T06:07:42Z"
+  generation: 1
+  name: as-minio
+  namespace: ns-minio
+  resourceVersion: "4549"
+  uid: c91a8c88-fe71-4365-9d01-a6d03a0d60f6
+scheduler:
+  name: ""
+spec:
+  configuration:
+    name: as-minio-env-configuration
+  credsSecret:
+    name: as-minio-secret
+  exposeServices:  # Exposed Services
+    console: true
+    minio: true
+  image: quay.io/minio/minio:RELEASE.2022-06-11T19-55-32Z
+  imagePullSecret: {}
+  mountPath: /export
+  pools:
+  - name: pool-0
+    resources: {}
+    servers: 4
+    volumeClaimTemplate:
+      metadata:
+        creationTimestamp: null
+        name: data
+      spec:
+        accessModes:
+        - ReadWriteOnce
+        resources:
+          requests:
+            storage: "2147483648"
+        storageClassName: sc-minio
+      status: {}
+    volumesPerServer: 1
+  requestAutoCert: true
+  users:
+  - name: as-minio-user-0
